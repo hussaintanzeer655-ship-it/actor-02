@@ -1,0 +1,10 @@
+/* No external assets */
+:root{--bg:#fff;--card:#fff;--text:#111;--muted:#666;--accent:#4f8af4}
+html,body{margin:0;height:100%}
+body{font-family:Arial, sans-serif;background:var(--bg);color:var(--text)}
+.card{background:var(--card);border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+#intro{padding:20px}
+#timeline{padding:14px}
+#list{display:flex;gap:12px;list-style:none;margin:0;padding:0;overflow:auto}
+button{cursor:pointer}
+footer{font-size:.9em;color:#666;margin:12px 0}
