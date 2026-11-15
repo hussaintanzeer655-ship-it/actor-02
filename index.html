@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Actor Portfolio 02</title>
+<style>*{box-sizing:border-box}html,body{margin:0}body{font-family:Arial, sans-serif;background:#f4f6f8;color:#111}
+:root{--bg:#fff;--card:#fff;--text:#111;--muted:#555;--accent:#4f8af4}
+</style>
+</head>
+<body>
+<header style="display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid #ddd">
+  <div>Actor Portfolio</div>
+  <button id="toggle" aria-label="Theme">●</button>
+</header>
+<main style="padding:20px;max-width:900px;margin:0 auto">
+  <section id="intro" class="card" style="padding:20px;border-radius:12px">
+    <h2 style="margin:0 0 8px">Versatile Performer</h2>
+    <p style="margin:0; color:var(--muted, #666)">A crisp showcase of screen and stage work with an interactive timeline.</p>
+  </section>
+  <section id="timeline" class="card" style="margin-top:14px;padding:14px;border-radius:12px">
+    <h3 style="margin:0 0 8px">Filmography Timeline</h3>
+    <ul id="list" style="list-style:none;padding:0;margin:0;display:flex;gap:16px;overflow:auto;white-space:nowrap"> </ul>
+  </section>
+</main>
+<footer style="text-align:center;padding:12px;color:#666">© 2026 Actor Portfolio</footer>
+<script>
+(function(){
+  const items=[
+    {y:2024,t:'Lead in indie drama'},
+    {y:2023,t:'Supporting role in thriller'},
+    {y:2022,t:'Theatre, one-act'}
+  ];
+  const list=document.getElementById('list');
+  items.forEach(it=>{ const li=document.createElement('li'); li.style.display='inline-block'; li.style.minWidth='180px'; li.style.padding='8px'; li.style.border='1px solid #ddd'; li.style.borderRadius='8px'; li.innerHTML=`<strong>${it.y}</strong><br>${it.t}`; list.appendChild(li);});
+  document.getElementById('toggle').addEventListener('click',()=>{ document.body.style.backgroundColor=document.body.style.backgroundColor? '#fff':'#e9eef5'; document.body.style.color=document.body.style.color? '#111':'#000'; });
+})();
+</script>
+</body>
+</html>
